@@ -46,6 +46,9 @@ values:
           - name: custom-tools
             subPath: argocd-vault-plugin
             mountPath: /usr/local/bin/argocd-vault-plugin
+        envFrom:
+          - secretRef:
+            name: vault-env
 
       # argocd-vault-plugin with Kustomize
       - name: avp-kustomize
@@ -71,6 +74,9 @@ values:
           - name: custom-tools
             subPath: argocd-vault-plugin
             mountPath: /usr/local/bin/argocd-vault-plugin
+        envFrom:
+          - secretRef:
+            name: vault-env
 
       # argocd-vault-plugin with plain YAML
       - name: avp
@@ -96,6 +102,9 @@ values:
           - name: custom-tools
             subPath: argocd-vault-plugin
             mountPath: /usr/local/bin/argocd-vault-plugin
+        envFrom:
+          - secretRef:
+            name: vault-env
 
     volumes:
       - configMap:
@@ -103,9 +112,6 @@ values:
         name: cmp-plugin
       - name: custom-tools
         emptyDir: {}
-    envFrom:
-      - secretRef:
-          name: vault-env
 
   extraObjects:
     - kind: Secret
