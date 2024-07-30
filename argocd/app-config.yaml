@@ -100,7 +100,7 @@ values:
 
     volumes:
       - configMap:
-          name: cmp-plugin
+          name: argocd-cmp-cm
         name: cmp-plugin
       - name: custom-tools
         emptyDir: {}
