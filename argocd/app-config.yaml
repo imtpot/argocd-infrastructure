@@ -48,7 +48,7 @@ values:
             mountPath: /usr/local/bin/argocd-vault-plugin
         envFrom:
           - secretRef:
-            name: vault-env
+              name: vault-env
 
       # argocd-vault-plugin with Kustomize
       - name: avp-kustomize
@@ -76,7 +76,7 @@ values:
             mountPath: /usr/local/bin/argocd-vault-plugin
         envFrom:
           - secretRef:
-            name: vault-env
+              name: vault-env
 
       # argocd-vault-plugin with plain YAML
       - name: avp
@@ -104,7 +104,7 @@ values:
             mountPath: /usr/local/bin/argocd-vault-plugin
         envFrom:
           - secretRef:
-            name: vault-env
+              name: vault-env
 
     volumes:
       - configMap:
