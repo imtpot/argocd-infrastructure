@@ -26,13 +26,12 @@ vault write auth/kubernetes/role/argocd-repo-server \
     bound_service_account_names=argocd-repo-server \
     bound_service_account_namespaces=argocd \
     policies=argocd-repo-server \
-    ttl=24h
+    ttl=1h
 ```
 
 ### Test
 
 ```bash
 vault secrets enable -path=secret kv-v2
-vault kv put secret/test_token token=test
-vault kv put secret/podinfo repl=3
+vault kv put secret/podinfo loglevel=debug
 ```
