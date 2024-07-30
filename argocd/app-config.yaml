@@ -142,7 +142,7 @@ values:
             command:
               - sh
               - "-c"
-              - "kustomize build . | argocd-vault-plugin generate -"
+              - "kustomize build --enable-helm . | argocd-vault-plugin generate -"
           lockRepo: false
         avp-helm:
           allowConcurrency: true
