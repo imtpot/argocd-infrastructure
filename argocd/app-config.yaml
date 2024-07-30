@@ -104,13 +104,13 @@ values:
       - name: custom-tools
         emptyDir: {}
     env:
-      - name: ARGOCD_ENV_AVP_TYPE
+      - name: AVP_TYPE
         value: vault
-      - name: ARGOCD_ENV_AVP_AUTH_TYPE
+      - name: AVP_AUTH_TYPE
         value: k8s
-      - name: ARGOCD_ENV_AVP_K8S_ROLE
+      - name: AVP_K8S_ROLE
         value: argocd-repo-server
-      - name: ARGOCD_ENV_VAULT_ADDR
+      - name: VAULT_ADDR
         value: http://vault.vault:8200
     serviceAccount:
       automountServiceAccountToken: true
