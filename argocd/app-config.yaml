@@ -5,4 +5,4 @@ source:
   targetRevision: 7.3.8
   chart: argo-cd
 
-values_file: values.yaml
+value_files: values.yaml
