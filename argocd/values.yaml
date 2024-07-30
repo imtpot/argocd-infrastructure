@@ -1,13 +1,9 @@
 # Add lovely-vault-plugin to the repo-server pod
 repoServer:
   extraContainers:
-    - name: lovely-plugin
-      # Choose your image here - this one has the Argo CD Vault plugin in it. See https://github.com/crumbhole/argocd-lovely-plugin/blob/main/doc/variations.md
-      image: ghcr.io/crumbhole/lovely-vault-plugin:1.0.3
-      # Here we are configuring default environment for every app - in this case vault
-      envFrom:
-        - secretRef:
-            name: vault-env
+    - name: argocd-lovely-plugin
+      # Choose your image here - see https://github.com/crumbhole/argocd-lovely-plugin/blob/main/doc/variations.md
+      image: ghcr.io/crumbhole/lovely:1.0.3
       securityContext:
         runAsNonRoot: true
         runAsUser: 999
