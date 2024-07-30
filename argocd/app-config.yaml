@@ -112,6 +112,8 @@ values:
         value: argocd-repo-server
       - name: VAULT_ADDR
         value: http://vault.vault:8200
+    serviceAccount:
+      automountServiceAccountToken: true
 
   configs:
     cm:
