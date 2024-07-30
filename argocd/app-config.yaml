@@ -50,3 +50,4 @@ values:
   configs:
     cm:
       exec.enabled: true
+      timeout.reconciliation: 30s
