@@ -49,3 +49,4 @@ values:
     cm:
       exec.enabled: true
       timeout.reconciliation: 30s
+      kustomize.buildOptions: --enable-helm
