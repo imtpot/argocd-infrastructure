@@ -1,0 +1,9 @@
+name: argocd
+namespace: argocd
+source:
+  repoURL: https://argoproj.github.io/argo-helm
+  targetRevision: 7.3.11
+  chart: argo-cd
+
+values_files:
+  - values.yaml
